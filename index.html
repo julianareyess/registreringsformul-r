@@ -4,12 +4,43 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="stylesheet" href="style.css"/>
+    
   </head>
   <body>
-    <form action="https://httpbin.org/Anything" method="post">
-      <input name="firstName" type="text" />
-      <input name="lastName" type="text" />
-      <button type="submit">skicka</button>
+    <form action="https://httpbin.org/anything" method="post">
+
+      <label for="firstName">FÖRNAMN*</label>
+      <input id= "firstName" name="firstName" type="text"required aria-required="true"/>
+      
+
+      <label for="lastName">EFTERNAMN*</label>
+      <input id="firstname" name="lastName" type="text"required aria-required="true"/>
+      
+
+      <label for="email">E-POST*</label>
+      <input id "email" name="email" type="email" required aria-required="true"/>
+      
+        <div class="form-group">
+            <label for="telefonnummer">TELEFONNUMMER*</label>
+            <input type="text" id="telefonnummer" name="telefonnummer" placeholder="+46 7X XXX XX XX" required aria-required="true">
+        </div>
+        <div class="form-group">
+            <label for="personnummer">PERSONNUMMER*</label>
+            <input type="text" id="personnummer" name="personnummer" placeholder="ÅÅÅÅMMDD-NNNN" required aria-required="true">
+        </div>
+      
+      <label for="password">LÖSENORD*</label>
+      <input id="password"  name="password" type="password" required aria-required="true"/>
+     
+      
+    <div class="checkbox-container">
+      <label for="acceptTerms">Jag har läst och accepterar <a href="#" target="_blank">villkoren</a></label>
+      <input type="checkbox" id="acceptTerms" name="acceptTerms" required aria-required="true">
+    </div>
+  
+      <button type="submit">Registrera</button>
+
     </form>
   </body>
 </html>
